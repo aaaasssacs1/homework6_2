@@ -1,5 +1,5 @@
 <template>
-	<li class="item">
+	<li :class="['item', packet.style || 'normal']">
 		<div class="meta">
 			<div class="title">{{ packet.title }}</div>
 			<div class="sub">总额 ¥{{ packet.totalAmount.toFixed(2) }} · 数量 {{ packet.count }}</div>
@@ -28,6 +28,18 @@ defineProps<{ packet: RedPacket }>()
 	background: #fff;
 	border-radius: 8px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.item.normal {
+	background: linear-gradient(135deg, #f56c6c 0%, #ff9a9e 100%);
+}
+
+.item.birthday {
+	background: linear-gradient(135deg, #fd79a8 0%, #ffd1dc 100%);
+}
+
+.item.festival {
+	background: linear-gradient(135deg, #e17055 0%, #fab1a0 100%);
 }
 .meta .title { font-weight: 700; margin-bottom: 6px; }
 .sub { color: #666; font-size: 12px; }

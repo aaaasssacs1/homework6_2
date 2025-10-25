@@ -23,17 +23,30 @@ export const packets: Record<string, RedPacket> = {
 		leftCount: 10,
 		startAt: Date.now() - 60_000,
 		endAt: Date.now() + 60 * 60_000,
+		style: 'normal'
 	},
 	'p2': {
 		id: 'p2',
-		title: '幸运红包',
+		title: '生日快乐红包',
 		totalAmount: 50,
 		leftAmount: 50,
 		count: 5,
 		leftCount: 5,
 		startAt: Date.now() - 10_000,
 		endAt: Date.now() + 30 * 60_000,
+		style: 'birthday'
 	},
+	'p3': {
+		id: 'p3',
+		title: '国庆节红包',
+		totalAmount: 88,
+		leftAmount: 88,
+		count: 8,
+		leftCount: 8,
+		startAt: Date.now(),
+		endAt: Date.now() + 24 * 60 * 60_000,
+		style: 'festival'
+	}
 }
 
 export const records: GrabRecord[] = []

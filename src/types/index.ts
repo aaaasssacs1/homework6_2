@@ -1,3 +1,5 @@
+export type RedPacketStyle = 'normal' | 'birthday' | 'festival'
+
 export interface RedPacket {
 	id: string
 	title: string
@@ -7,6 +9,7 @@ export interface RedPacket {
 	leftCount: number
 	startAt: number
 	endAt: number
+	style?: RedPacketStyle
 }
 
 export interface GrabRecord {
